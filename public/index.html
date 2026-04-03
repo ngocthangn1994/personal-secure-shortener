@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Secure Shortener</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Personal Secure Shortener</h1>
+
+    <form id="linkForm">
+      <label for="short">Short Key</label>
+      <input type="text" id="short" name="short" placeholder="google" required />
+
+      <label for="longUrl">Long URL</label>
+      <input type="url" id="longUrl" name="longUrl" placeholder="https://www.google.com" required />
+
+      <label for="userName">Username</label>
+      <input type="text" id="userName" name="userName" placeholder="myuser" required />
+
+      <label for="passWord">Password</label>
+      <input type="password" id="passWord" name="passWord" placeholder="mypassword" required />
+
+      <button type="submit">Save Link</button>
+    </form>
+
+    <p id="statusMessage"></p>
+
+    <hr />
+
+    <h2>Saved Links</h2>
+    <div id="linksContainer"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

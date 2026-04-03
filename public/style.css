@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: white;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+input {
+  padding: 10px;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 16px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.link-card {
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: #fafafa;
+}
+
+.credentials {
+  margin-top: 10px;
+  padding: 10px;
+  background: #eef6ff;
+  border-radius: 6px;
+}
