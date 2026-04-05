@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Secure Shortener</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
   <div class="cyber-particles">
     <span style="left: 8%; animation-duration: 8s; animation-delay: 0s;"></span>
@@ -13,7 +21,10 @@
 
   <div class="container">
     <div class="top-bar">
-      <div class="status-left"><span class="dot"></span><span>System Online</span></div>
+      <div class="status-left">
+        <span class="dot"></span>
+        <span>System Online</span>
+      </div>
       <div class="status-center">Secure Intelligence Access Node</div>
       <div class="status-right">Level 7 Clearance</div>
     </div>
@@ -58,16 +69,40 @@
 
     <form id="linkForm">
       <label for="short">Alias Key</label>
-      <input type="text" id="short" name="short" placeholder="operation-alpha" required />
+      <input
+        type="text"
+        id="short"
+        name="short"
+        placeholder="operation-alpha"
+        required
+      />
 
       <label for="longUrl">Target Destination</label>
-      <input type="url" id="longUrl" name="longUrl" placeholder="https://secure-target.com" required />
+      <input
+        type="url"
+        id="longUrl"
+        name="longUrl"
+        placeholder="https://secure-target.com"
+        required
+      />
 
       <label for="userName">Agent ID</label>
-      <input type="text" id="userName" name="userName" placeholder="agent.delta" required />
+      <input
+        type="text"
+        id="userName"
+        name="userName"
+        placeholder="agent.delta"
+        required
+      />
 
       <label for="passWord">Access Phrase</label>
-      <input type="password" id="passWord" name="passWord" placeholder="••••••••••" required />
+      <input
+        type="password"
+        id="passWord"
+        name="passWord"
+        placeholder="••••••••••"
+        required
+      />
 
       <button type="submit">Authorize & Save Record</button>
     </form>
@@ -77,8 +112,31 @@
     <hr />
 
     <h2>Saved Intelligence Records</h2>
-    <div id="linksContainer"></div>
+    <div id="linksContainer">
+      <div class="link-card">
+        <strong>operation-alpha</strong>
+        <p><b>Destination:</b> <a href="#">https://secure-target.com</a></p>
+        <p><b>Agent ID:</b> agent.delta</p>
+        <p><b>Status:</b> Encrypted and stored</p>
+        <div class="credentials">
+          Access credentials protected. Use secure reveal protocol.
+        </div>
+        <button class="view-btn">View Secure Record</button>
+      </div>
+
+      <div class="link-card">
+        <strong>ghost-node</strong>
+        <p><b>Destination:</b> <a href="#">https://intel-archive.net</a></p>
+        <p><b>Agent ID:</b> unit.echo</p>
+        <p><b>Status:</b> Active redirect</p>
+        <div class="credentials">
+          Access credentials protected. Use secure reveal protocol.
+        </div>
+        <button class="view-btn">View Secure Record</button>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
 </body>
+</html>
