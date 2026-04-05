@@ -7,7 +7,7 @@ const app = express();
 connectDB();
 
 const linkRoutes = require("./routes/linkRoutes");
-const { redirectToLongUrl } = require("./controllers/linkController");
+const { redirectToLongUrl, goShortcutRedirect } = require("./controllers/linkController");
 
 const PORT = process.env.PORT || 3000;
 
@@ -19,6 +19,7 @@ app.get("/", (req, res)=>{
 });
 
 app.use("/api/links", linkRoutes);
+app.get("/go", goShortcutRedirect);
 app.get("/:short", redirectToLongUrl);
 
 app.listen(PORT, () => {

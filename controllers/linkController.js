@@ -104,7 +104,6 @@ const getLinkByShort = async(req, res)=>{
         });
     }
 }
-
 const redirectToLongUrl = async(req, res)=>{
     try{
         const {short} = req.params;
@@ -119,11 +118,33 @@ const redirectToLongUrl = async(req, res)=>{
         return res.status(500).send("Server error");
     }
 }
+const goShortcutRedirect = async (req, res) => {
+    try {
+        const { q } = req.query;
+
+        if (!q) {
+            return res.status(400).send("Missing short key");
+        }
+
+        const link = await Link.findOne({ short: q });
+
+        if (!link) {
+            return res.status(404).send("Short URL not found");
+        }
+
+        return res.redirect(link.longUrl);
+    } catch (error) {
+        console.error("Error redirecting from /go:", error);
+        return res.status(500).send("Server error");
+    }
+
+};
 
 
 module.exports = {
   createLink,
   getAllLinks,
   getLinkByShort,
-  redirectToLongUrl
+  redirectToLongUrl,
+  goShortcutRedirect,
 };
