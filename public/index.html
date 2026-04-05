@@ -19,122 +19,404 @@
     <span style="left: 88%; animation-duration: 9s; animation-delay: 2.2s;"></span>
   </div>
 
-  <div class="container">
-    <div class="top-bar">
-      <div class="status-left">
-        <span class="dot"></span>
-        <span>System Online</span>
+  <div class="page-shell">
+    <!-- LEFT SIDE -->
+    <aside class="side-panel left-panel">
+      <div class="panel-box brand-box">
+        <p class="panel-mini-label">Field Division</p>
+        <h3>GhostLink Command</h3>
+        <p class="panel-text">
+          Fictional covert-style redirect vault with encrypted storage, alias tracking, and access logging.
+        </p>
       </div>
-      <div class="status-center">Secure Intelligence Access Node</div>
-      <div class="status-right">Level 7 Clearance</div>
-    </div>
 
-    <div class="hero-panel">
-      <p class="eyebrow">Classified // Encrypted // Internal Use Only</p>
-      <h1>Personal Secure Shortener</h1>
-      <p class="subtext">
-        Intelligence-grade link vault for secure redirection, credential storage, and protected access control.
-      </p>
-
-      <div class="badge-row">
-        <span class="badge">Encrypted Node</span>
-        <span class="badge">Secure Redirect</span>
-        <span class="badge">Credential Vault</span>
-        <span class="badge">Shadow Access</span>
-      </div>
-    </div>
-
-    <div class="warning-banner">
-      Warning: Unauthorized access to this node is prohibited. All actions may be monitored and logged.
-    </div>
-
-    <div class="intel-panel">
-      <div class="intel-card">
-        <span class="intel-label">Server Status</span>
-        <strong>ACTIVE</strong>
-      </div>
-      <div class="intel-card">
-        <span class="intel-label">Threat Level</span>
-        <strong>LOW</strong>
-      </div>
-      <div class="intel-card">
-        <span class="intel-label">Access Channel</span>
-        <strong>ENCRYPTED</strong>
-      </div>
-      <div class="intel-card">
-        <span class="intel-label">Auth Mode</span>
-        <strong>MULTI-STEP</strong>
-      </div>
-    </div>
-
-    <form id="linkForm">
-      <label for="short">Alias Key</label>
-      <input
-        type="text"
-        id="short"
-        name="short"
-        placeholder="operation-alpha"
-        required
-      />
-
-      <label for="longUrl">Target Destination</label>
-      <input
-        type="url"
-        id="longUrl"
-        name="longUrl"
-        placeholder="https://secure-target.com"
-        required
-      />
-
-      <label for="userName">Agent ID</label>
-      <input
-        type="text"
-        id="userName"
-        name="userName"
-        placeholder="agent.delta"
-        required
-      />
-
-      <label for="passWord">Access Phrase</label>
-      <input
-        type="password"
-        id="passWord"
-        name="passWord"
-        placeholder="••••••••••"
-        required
-      />
-
-      <button type="submit">Authorize & Save Record</button>
-    </form>
-
-    <p id="statusMessage"></p>
-
-    <hr />
-
-    <h2>Saved Intelligence Records</h2>
-    <div id="linksContainer">
-      <div class="link-card">
-        <strong>operation-alpha</strong>
-        <p><b>Destination:</b> <a href="#">https://secure-target.com</a></p>
-        <p><b>Agent ID:</b> agent.delta</p>
-        <p><b>Status:</b> Encrypted and stored</p>
-        <div class="credentials">
-          Access credentials protected. Use secure reveal protocol.
+      <div class="panel-box">
+        <div class="panel-heading">
+          <span class="panel-heading-line"></span>
+          <span>Left Command Menu</span>
         </div>
-        <button class="view-btn">View Secure Record</button>
+
+        <nav class="side-menu">
+          <a href="#" class="active">Mission Dashboard</a>
+          <a href="#">Alias Registry</a>
+          <a href="#">Secure Vault</a>
+          <a href="#">Field Agents</a>
+          <a href="#">Access Logs</a>
+          <a href="#">Protocol Archive</a>
+        </nav>
       </div>
 
-      <div class="link-card">
-        <strong>ghost-node</strong>
-        <p><b>Destination:</b> <a href="#">https://intel-archive.net</a></p>
-        <p><b>Agent ID:</b> unit.echo</p>
-        <p><b>Status:</b> Active redirect</p>
-        <div class="credentials">
-          Access credentials protected. Use secure reveal protocol.
+      <div class="panel-box">
+        <div class="panel-heading">
+          <span class="panel-heading-line"></span>
+          <span>Threat Scan</span>
         </div>
-        <button class="view-btn">View Secure Record</button>
+
+        <div class="meter-list">
+          <div class="meter-row">
+            <span>Network Shield</span>
+            <div class="meter"><span style="width: 92%;"></span></div>
+          </div>
+          <div class="meter-row">
+            <span>Vault Integrity</span>
+            <div class="meter"><span style="width: 87%;"></span></div>
+          </div>
+          <div class="meter-row">
+            <span>Node Concealment</span>
+            <div class="meter"><span style="width: 76%;"></span></div>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <div class="panel-box">
+        <div class="panel-heading">
+          <span class="panel-heading-line"></span>
+          <span>Mission Notes</span>
+        </div>
+
+        <ul class="data-list">
+          <li>Shadow mode active</li>
+          <li>Redirect tunnel stable</li>
+          <li>Credential vault encrypted</li>
+          <li>Record indexing online</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- CENTER -->
+    <main class="container main-container">
+      <div class="top-bar">
+        <div class="status-left">
+          <span class="dot"></span>
+          <span>System Online</span>
+        </div>
+        <div class="status-center">Secure Intelligence Access Node</div>
+        <div class="status-right">Level 7 Clearance</div>
+      </div>
+
+      <section class="hero-panel">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Classified // Encrypted // Internal Use Only</p>
+            <h1>Personal Secure Shortener</h1>
+            <p class="subtext">
+              Intelligence-grade link vault for secure redirection, credential storage, protected access control,
+              and covert-looking command center visuals.
+            </p>
+
+            <div class="badge-row">
+              <span class="badge">Encrypted Node</span>
+              <span class="badge">Secure Redirect</span>
+              <span class="badge">Credential Vault</span>
+              <span class="badge">Shadow Access</span>
+            </div>
+          </div>
+
+          <div class="hero-side-card">
+            <p class="hero-side-label">Active Operation</p>
+            <h3>Case File // GOLYNK-17</h3>
+            <div class="hero-side-stats">
+              <div>
+                <span>Region</span>
+                <strong>Houston Grid</strong>
+              </div>
+              <div>
+                <span>Signal</span>
+                <strong>Stable</strong>
+              </div>
+              <div>
+                <span>Mode</span>
+                <strong>Covert UI</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="warning-banner">
+        Warning: Unauthorized access to this node is prohibited. All activity may be monitored, recorded, and traced.
+      </div>
+
+      <div class="intel-panel">
+        <div class="intel-card">
+          <span class="intel-label">Server Status</span>
+          <strong>ACTIVE</strong>
+        </div>
+        <div class="intel-card">
+          <span class="intel-label">Threat Level</span>
+          <strong>LOW</strong>
+        </div>
+        <div class="intel-card">
+          <span class="intel-label">Access Channel</span>
+          <strong>ENCRYPTED</strong>
+        </div>
+        <div class="intel-card">
+          <span class="intel-label">Auth Mode</span>
+          <strong>MULTI-STEP</strong>
+        </div>
+      </div>
+
+      <section class="command-section">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Secure Intake</p>
+            <h2 class="section-title">Register New Operation Link</h2>
+          </div>
+          <div class="section-tag">Command Form</div>
+        </div>
+
+        <form id="linkForm" class="command-form">
+          <div class="form-grid">
+            <div class="field-group">
+              <label for="short">Alias Key</label>
+              <input
+                type="text"
+                id="short"
+                name="short"
+                placeholder="operation-alpha"
+                required
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="longUrl">Target Destination</label>
+              <input
+                type="url"
+                id="longUrl"
+                name="longUrl"
+                placeholder="https://secure-target.com"
+                required
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="userName">Agent ID</label>
+              <input
+                type="text"
+                id="userName"
+                name="userName"
+                placeholder="agent.delta"
+                required
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="passWord">Access Phrase</label>
+              <input
+                type="password"
+                id="passWord"
+                name="passWord"
+                placeholder="••••••••••"
+                required
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="main-action-btn">Authorize & Save Record</button>
+        </form>
+
+        <p id="statusMessage"></p>
+      </section>
+
+      <section class="command-section records-section">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Encrypted Archive</p>
+            <h2 class="section-title">Saved Intelligence Records</h2>
+          </div>
+          <div class="record-count">12 active files</div>
+        </div>
+
+        <div id="linksContainer" class="records-grid">
+          <article class="link-card">
+            <div class="card-top">
+              <div>
+                <span class="card-mini-label">Secure File</span>
+                <h3>operation-alpha</h3>
+              </div>
+              <span class="record-chip">ACTIVE</span>
+            </div>
+
+            <div class="record-grid">
+              <div class="record-item">
+                <span>Destination</span>
+                <a href="#">https://secure-target.com</a>
+              </div>
+              <div class="record-item">
+                <span>Agent ID</span>
+                <strong>agent.delta</strong>
+              </div>
+              <div class="record-item">
+                <span>Protocol</span>
+                <strong>Redirect Tunnel</strong>
+              </div>
+              <div class="record-item">
+                <span>Status</span>
+                <strong>Encrypted</strong>
+              </div>
+            </div>
+
+            <div class="credentials">
+              Access credentials protected. Use secure reveal protocol to inspect the stored intelligence package.
+            </div>
+
+            <div class="card-actions">
+              <button class="view-btn" type="button">View Secure Record</button>
+              <button class="ghost-btn" type="button">Open Target</button>
+            </div>
+          </article>
+
+          <article class="link-card">
+            <div class="card-top">
+              <div>
+                <span class="card-mini-label">Secure File</span>
+                <h3>ghost-node</h3>
+              </div>
+              <span class="record-chip standby">STANDBY</span>
+            </div>
+
+            <div class="record-grid">
+              <div class="record-item">
+                <span>Destination</span>
+                <a href="#">https://intel-archive.net</a>
+              </div>
+              <div class="record-item">
+                <span>Agent ID</span>
+                <strong>unit.echo</strong>
+              </div>
+              <div class="record-item">
+                <span>Protocol</span>
+                <strong>Vault Mirror</strong>
+              </div>
+              <div class="record-item">
+                <span>Status</span>
+                <strong>Ready</strong>
+              </div>
+            </div>
+
+            <div class="credentials">
+              Access credentials protected. Multi-step reveal sequence required before record can be opened.
+            </div>
+
+            <div class="card-actions">
+              <button class="view-btn" type="button">View Secure Record</button>
+              <button class="ghost-btn" type="button">Open Target</button>
+            </div>
+          </article>
+
+          <article class="link-card">
+            <div class="card-top">
+              <div>
+                <span class="card-mini-label">Secure File</span>
+                <h3>black-raven</h3>
+              </div>
+              <span class="record-chip">LIVE</span>
+            </div>
+
+            <div class="record-grid">
+              <div class="record-item">
+                <span>Destination</span>
+                <a href="#">https://ops-briefing.io</a>
+              </div>
+              <div class="record-item">
+                <span>Agent ID</span>
+                <strong>raven.12</strong>
+              </div>
+              <div class="record-item">
+                <span>Protocol</span>
+                <strong>Fast Redirect</strong>
+              </div>
+              <div class="record-item">
+                <span>Status</span>
+                <strong>Tracked</strong>
+              </div>
+            </div>
+
+            <div class="credentials">
+              Archive synced. Shadow tracking enabled. Record remains available for fast launch and protected inspection.
+            </div>
+
+            <div class="card-actions">
+              <button class="view-btn" type="button">View Secure Record</button>
+              <button class="ghost-btn" type="button">Open Target</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- RIGHT SIDE -->
+    <aside class="side-panel right-panel">
+      <div class="panel-box">
+        <div class="panel-heading">
+          <span class="panel-heading-line"></span>
+          <span>Audit Feed</span>
+        </div>
+
+        <ul class="log-list">
+          <li><span>09:14</span> Node handshake confirmed</li>
+          <li><span>09:21</span> Alias registry refreshed</li>
+          <li><span>09:32</span> Vault encryption verified</li>
+          <li><span>09:48</span> Redirect channel checked</li>
+          <li><span>10:03</span> Agent access token rotated</li>
+        </ul>
+      </div>
+
+      <div class="panel-box">
+        <div class="panel-heading">
+          <span class="panel-heading-line"></span>
+          <span>Quick Flags</span>
+        </div>
+
+        <div class="flag-grid">
+          <div class="flag-card">
+            <span>Files</span>
+            <strong>128</strong>
+          </div>
+          <div class="flag-card">
+            <span>Alerts</span>
+            <strong>03</strong>
+          </div>
+          <div class="flag-card">
+            <span>Agents</span>
+            <strong>19</strong>
+          </div>
+          <div class="flag-card">
+            <span>Nodes</span>
+            <strong>07</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-box">
+        <div class="panel-heading">
+          <span class="panel-heading-line"></span>
+          <span>Operation Tags</span>
+        </div>
+
+        <div class="tag-cloud">
+          <span>stealth</span>
+          <span>vault</span>
+          <span>redirect</span>
+          <span>classified</span>
+          <span>covert</span>
+          <span>signal</span>
+          <span>intel</span>
+          <span>secure</span>
+        </div>
+      </div>
+
+      <div class="panel-box">
+        <div class="panel-heading">
+          <span class="panel-heading-line"></span>
+          <span>Directive</span>
+        </div>
+
+        <p class="panel-text">
+          Keep the visual style fictional and tactical-looking. It gives the secret-agent vibe without needing real agency logos.
+        </p>
+      </div>
+    </aside>
   </div>
 
   <script src="script.js"></script>
