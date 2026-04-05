@@ -53,7 +53,7 @@ body::after {
 .container {
   position: relative;
   z-index: 2;
-  max-width: 780px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 32px;
   border-radius: 18px;
@@ -75,18 +75,94 @@ body::after {
   pointer-events: none;
   background: linear-gradient(
     to bottom,
-    rgba(255,255,255,0.03),
+    rgba(255, 255, 255, 0.03),
     transparent 8%,
     transparent 92%,
-    rgba(255,255,255,0.02)
+    rgba(255, 255, 255, 0.02)
   );
   animation: flicker 3s infinite;
+}
+
+/* top status bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 10px 14px;
+  border: 1px solid rgba(0, 255, 136, 0.25);
+  border-radius: 12px;
+  background: rgba(0, 10, 8, 0.85);
+  color: #9fffd3;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 10px rgba(0, 255, 136, 0.03);
+}
+
+.status-left,
+.status-center,
+.status-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow:
+    0 0 8px rgba(34, 197, 94, 0.9),
+    0 0 16px rgba(34, 197, 94, 0.4);
+  animation: dotPulse 1.8s infinite;
+}
+
+/* hero section */
+.hero-panel {
+  margin-bottom: 22px;
+  padding: 22px;
+  border: 1px solid rgba(0, 255, 136, 0.22);
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(0, 20, 10, 0.94), rgba(0, 8, 6, 0.88));
+  box-shadow:
+    inset 0 0 20px rgba(0, 255, 136, 0.03),
+    0 0 20px rgba(0, 255, 136, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 136, 0.08),
+    transparent
+  );
+  animation: heroSweep 5s linear infinite;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #67e8f9;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 h1 {
   margin-top: 0;
   margin-bottom: 10px;
-  font-size: 30px;
+  font-size: 32px;
   color: #00ff88;
   text-align: center;
   text-transform: uppercase;
@@ -96,6 +172,95 @@ h1 {
     0 0 15px rgba(0, 255, 136, 0.5),
     0 0 25px rgba(0, 255, 136, 0.3);
   animation: glowPulse 2.5s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+.subtext {
+  margin: 8px 0 0;
+  color: #b6f7da;
+  font-size: 14px;
+  max-width: 700px;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.badge {
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 255, 136, 0.28);
+  background: rgba(0, 255, 136, 0.06);
+  color: #86efac;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 6px rgba(0, 255, 136, 0.03);
+}
+
+/* warning banner */
+.warning-banner {
+  margin: 18px 0 24px;
+  padding: 12px 14px;
+  border-left: 4px solid #00e5ff;
+  border-radius: 10px;
+  background: rgba(0, 229, 255, 0.08);
+  color: #baf6ff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.08);
+}
+
+/* intelligence stat cards */
+.intel-panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.intel-card {
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(0, 15, 10, 0.8);
+  border: 1px solid rgba(0, 255, 136, 0.18);
+  box-shadow:
+    inset 0 0 10px rgba(0, 255, 136, 0.03),
+    0 0 10px rgba(0, 255, 136, 0.03);
+  transition: 0.25s ease;
+}
+
+.intel-card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 0 10px rgba(0, 255, 136, 0.05),
+    0 0 14px rgba(0, 255, 136, 0.08);
+}
+
+.intel-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #67e8f9;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.intel-card strong {
+  color: #00ff88;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.35);
 }
 
 h2 {
@@ -257,6 +422,17 @@ hr {
   transition: 0.6s;
 }
 
+.link-card::after {
+  content: "SECURE FILE";
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 11px;
+  color: rgba(103, 232, 249, 0.75);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 .link-card:hover::before {
   left: 140%;
 }
@@ -300,6 +476,7 @@ hr {
   border: 1px solid rgba(0, 255, 136, 0.22);
   color: #86efac;
   line-height: 1.7;
+  box-shadow: inset 0 0 8px rgba(0, 255, 136, 0.04);
 }
 
 .view-btn {
@@ -369,11 +546,21 @@ hr {
 }
 
 @keyframes flicker {
-  0%, 100% { opacity: 0.12; }
-  20% { opacity: 0.06; }
-  40% { opacity: 0.15; }
-  60% { opacity: 0.08; }
-  80% { opacity: 0.13; }
+  0%, 100% {
+    opacity: 0.12;
+  }
+  20% {
+    opacity: 0.06;
+  }
+  40% {
+    opacity: 0.15;
+  }
+  60% {
+    opacity: 0.08;
+  }
+  80% {
+    opacity: 0.13;
+  }
 }
 
 @keyframes floatParticle {
@@ -390,7 +577,42 @@ hr {
   }
 }
 
+@keyframes dotPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 8px rgba(34, 197, 94, 0.9),
+      0 0 16px rgba(34, 197, 94, 0.4);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow:
+      0 0 12px rgba(34, 197, 94, 1),
+      0 0 24px rgba(34, 197, 94, 0.5);
+  }
+}
+
+@keyframes heroSweep {
+  0% {
+    left: -130%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+
 /* mobile */
+@media (max-width: 900px) {
+  .intel-panel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 @media (max-width: 768px) {
   body {
     padding: 20px 14px;
@@ -402,6 +624,7 @@ hr {
 
   h1 {
     font-size: 24px;
+    letter-spacing: 2px;
   }
 
   h2 {
@@ -411,5 +634,21 @@ hr {
   input,
   button {
     font-size: 14px;
+  }
+
+  .hero-panel {
+    padding: 18px;
+  }
+
+  .intel-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .badge-row {
+    gap: 8px;
+  }
+
+  .badge {
+    font-size: 11px;
   }
 }

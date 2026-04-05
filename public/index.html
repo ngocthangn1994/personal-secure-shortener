@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personal Secure Shortener</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
 <body>
   <div class="cyber-particles">
     <span style="left: 8%; animation-duration: 8s; animation-delay: 0s;"></span>
@@ -20,32 +12,73 @@
   </div>
 
   <div class="container">
-    <h1>Personal Secure Shortener</h1>
+    <div class="top-bar">
+      <div class="status-left"><span class="dot"></span><span>System Online</span></div>
+      <div class="status-center">Secure Intelligence Access Node</div>
+      <div class="status-right">Level 7 Clearance</div>
+    </div>
+
+    <div class="hero-panel">
+      <p class="eyebrow">Classified // Encrypted // Internal Use Only</p>
+      <h1>Personal Secure Shortener</h1>
+      <p class="subtext">
+        Intelligence-grade link vault for secure redirection, credential storage, and protected access control.
+      </p>
+
+      <div class="badge-row">
+        <span class="badge">Encrypted Node</span>
+        <span class="badge">Secure Redirect</span>
+        <span class="badge">Credential Vault</span>
+        <span class="badge">Shadow Access</span>
+      </div>
+    </div>
+
+    <div class="warning-banner">
+      Warning: Unauthorized access to this node is prohibited. All actions may be monitored and logged.
+    </div>
+
+    <div class="intel-panel">
+      <div class="intel-card">
+        <span class="intel-label">Server Status</span>
+        <strong>ACTIVE</strong>
+      </div>
+      <div class="intel-card">
+        <span class="intel-label">Threat Level</span>
+        <strong>LOW</strong>
+      </div>
+      <div class="intel-card">
+        <span class="intel-label">Access Channel</span>
+        <strong>ENCRYPTED</strong>
+      </div>
+      <div class="intel-card">
+        <span class="intel-label">Auth Mode</span>
+        <strong>MULTI-STEP</strong>
+      </div>
+    </div>
 
     <form id="linkForm">
-      <label for="short">Short Key</label>
-      <input type="text" id="short" name="short" placeholder="google" required />
+      <label for="short">Alias Key</label>
+      <input type="text" id="short" name="short" placeholder="operation-alpha" required />
 
-      <label for="longUrl">Long URL</label>
-      <input type="url" id="longUrl" name="longUrl" placeholder="https://www.google.com" required />
+      <label for="longUrl">Target Destination</label>
+      <input type="url" id="longUrl" name="longUrl" placeholder="https://secure-target.com" required />
 
-      <label for="userName">Username</label>
-      <input type="text" id="userName" name="userName" placeholder="myuser" required />
+      <label for="userName">Agent ID</label>
+      <input type="text" id="userName" name="userName" placeholder="agent.delta" required />
 
-      <label for="passWord">Password</label>
-      <input type="password" id="passWord" name="passWord" placeholder="mypassword" required />
+      <label for="passWord">Access Phrase</label>
+      <input type="password" id="passWord" name="passWord" placeholder="••••••••••" required />
 
-      <button type="submit">Save Link</button>
+      <button type="submit">Authorize & Save Record</button>
     </form>
 
     <p id="statusMessage"></p>
 
     <hr />
 
-    <h2>Saved Links</h2>
+    <h2>Saved Intelligence Records</h2>
     <div id="linksContainer"></div>
   </div>
 
   <script src="script.js"></script>
 </body>
-</html>
